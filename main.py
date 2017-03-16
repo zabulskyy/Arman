@@ -8,6 +8,16 @@ def root():
     return app.send_static_file('index.html')
 
 
+@app.route('/computer-science')
+def cs():
+    return app.send_static_file('computer-science.html')
+
+
+@app.route('/economics')
+def ec():
+    return app.send_static_file('economics.html')
+
+
 @app.route('/<path:path>')
 def static_proxy(path):
     # send_static_file will guess the correct MIME type

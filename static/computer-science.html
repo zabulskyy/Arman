@@ -1,7 +1,10 @@
+<!-- NOT DONE YET -->
+
+
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Fictum University of Saint Arman</title>
+		<title>Application Form</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<!--[if lte IE 8]>
@@ -25,55 +28,72 @@
 								<header id="header">
 								</header>
 
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Application form </h1>
+										</header>
+								</section>
+
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Computer Science Faculty</h2>
+										<h2>Personal INFO:</h2>
 									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<h3>General info about the program & requirements</h3>
-											<ul>
-												<li>Offers 44 different courses</li>
-												<li>4 years of studying + practice in one of the leading companies of the country</li>
-												<li>Opportunity to study abroad for one semester</li>
-												<li>Scholarship for top 10 students of the year</li>
-												<li>To apply for our program you have to pass IHSGE(Internatoinal High School Graduation Exam) in mathematics, English, and physics, with grade more than 65%. Otherwise your application wont be considered. Other details about required documentation will be sent on your email after the interview.</li>
-											</ul>
+                                    <form name="test" method="post" action="input1.php">
+                                        <p><b>First name:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>Second name:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>Address(street,house,apt.no.,postal code,city,country):</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>Contact phone(country&city codes included):</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>Additional phone</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>Email:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>Gender:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>One of the parents/caretakers name:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>One of the parents/caretakers email address or phone:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                    </form>
+								</section>
 
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<h3>Why us?</h3>
-											<ul>
-												<li>We provide current knowledge which will be always actual for many years.</li>
-												<li>Learning practice with abroad lecturers, that expand your horizon and give a lot of interesting experience.</li>
-												<li>Our education is practice-oriented. This direction of education will motivate you and help with making your own projects.</li>
-												<li>We provide a lot of language-learning clubs on such languages as german, french, chinese, russian and spanish.</li>
-												<li>We guarantee interesting student life with abroad internship, versatile development and plenty of practice.</li>
-											</ul>
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>EDU INFO:</h2>
+									</header>
+                                    <form name="test" method="post" action="input1.php">
+                                        <p><b>High school nameyear marks:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                        <p><b>Year of graduation:</b><br>
+                                            <input type="text" size="40">
+                                        </p>
+                                    </form>
 
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3>Possibilities</h3>
-											<ul>
-												<li>Software developer</li>
-												<li>Data scientist</li>
-												<li>System administrator</li>
-												<li>Business analytics specialist</li>
-												<li>Tester</li>
-											</ul>
+								</section>
+                            <!-- Section -->
 
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3>Soft skills courses</h3>
-											<p>In these courses, you will learn essential leadership skills, including how to inspire and motivate individuals, manage talent, influence without authority, and lead teams. You will learn about concepts such as goal setting, value creation, global integration, and diversification. You will know how to overcome the ravages of chronic stress and renew your body and mind by building better relationships and positive approaches to leadership, effectively coach others toward sustained, desired change, learning or increased motivation in life and work. </p>
 
-										</article>
-									</div>
+								<section>
+									<header class="major">
+										<h2>Application INFO:</h2>
+									</header>
 								</section>
 
 						</div>
@@ -83,15 +103,44 @@
 					<div id="sidebar">
 						<div class="inner">
 
-
 							<!-- Menu -->
 								<nav id="menu">
 									<header class="major">
-										<h2>Menu</h2>
+
 									</header>
+												<form name="test" method="post" action="input1.php">
+													<p><b>Choose the faculty you want to apply for:</b><br>
+														<input type="text" size="40">
+													</p>
+											  </form>
+												<form>
+														<p><b>Do you need a dormitory at our collegium?</b><br>
+  												<input type="radio" name="test" value="Yes" checked> Yes<br>
+  												<input type="radio" name="test" value="No"> No<br>
+												</form>
+												<form name="test" method="post" action="input1.php">
+													<p><b>Additional information. Write there anything we need to know about you</b>
+												<br>(e.g. achievements, need for financial aid, medical condition, other)<br>
+														<input type="text" size="40">
+													</p>
+											  </form>
+												<p><b>Upload there your cv/resume</b></p>
+												<p>Write there a motivation letter(500 words). Include why you want to study at University of St. Arman and why you chose your sphere of study</p>
+												<input type='file' method='post' action='input1.php'>
+									<div>
+										<p><b>Write an essay on one of the chosen themes <br>(500 words):</b></p>
+										<ul>
+  										<li>Marketing and promotion is the key to a successful business.To what extent do you agree?</li>
+  										<li>Modern technology is now very common in most work places.
+													How do you think this has changed the way we work?
+													Do you think there are disadvantages to relying too much on technology?
+												</li>
+										</ul>
+								  </div>
+
 									<ul>
 										<li>
-											<span class="opener active">Faculties</span>
+											<h2><span class="opener active">Faculties</span></h2>
 											<ul>
 												<li><a href="/economics">Economics & Business</a></li>
 												<li><a href="/computer-science">Computer science</a></li>

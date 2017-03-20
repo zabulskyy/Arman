@@ -18,6 +18,11 @@ def ec():
     return app.send_static_file('economics.html')
 
 
+@app.route('/apply')
+def application_form():
+    return app.send_static_file('application-form.html')
+
+
 @app.route('/<path:path>')
 def static_proxy(path):
     # send_static_file will guess the correct MIME type

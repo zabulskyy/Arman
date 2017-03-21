@@ -2549,12 +2549,14 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
+		height: 164px;
+		overflow: hidden;
 	}
 
 		.image img {
 			border-radius: 0.375em;
 			display: block;
-			height: 164px;
+			height: auto;
 		}
 
 		.image.left, .image.right {

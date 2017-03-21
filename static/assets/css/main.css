@@ -2554,6 +2554,7 @@
 		.image img {
 			border-radius: 0.375em;
 			display: block;
+			height: 164px;
 		}
 
 		.image.left, .image.right {

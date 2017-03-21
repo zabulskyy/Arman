@@ -41,11 +41,19 @@ def application_form():
 @app.route('/apply', methods = ["POST"])
 def send_mail():
     try:
-        text = request.form['email']
-        msg = Message('Hello', sender = 'ivankosarevych007@gmail.com', recipients = [text])
-        msg.body = "Welcome to Fictum "
+        fn = request.form['fn']
+        sn = request.form['sn']
+        fac = request.form['fac']
+        email = request.form['email']
+        content = "Hello, {0} {1}. \n" \
+                  "We are happy to meet you at our Fictum University of Saint Arman. \n" \
+                  "We greet you at {2} faculty and wish productive studying and unforgettable experience. \n" \
+                  "See you on 1st September\n" \
+                  "Your faithful, Arman".format(fn, sn, fac)
+        msg = Message("Welcome", sender='armankingofkings@gmail.com',recipients = [email])
+        msg.body = content
         mail.send(msg)
-        return text
+        return app.send_static_file('application-form.html')
     except SMTPRecipientsRefused:
         flash("Incorrect email", "error")
         return app.send_static_file('application-form.html')

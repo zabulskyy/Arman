@@ -1,16 +1,12 @@
-from flask import Flask
-from flask import request
-from flask import render_template
-from flask import flash
+from flask import Flask, request, flash
 from smtplib import SMTPRecipientsRefused
-
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
 app.secret_key = 'some_secret'
-mail=Mail(app)
+# mail=Mail(app)
 
-app.config['MAIL_SERVER']='smtp.gmail.com'
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'armankingofkings@gmail.com'
 app.config['MAIL_PASSWORD'] = 'armantheking'
@@ -38,7 +34,8 @@ def ec():
 def application_form():
     return app.send_static_file('application-form.html')
 
-@app.route('/apply', methods = ["POST"])
+
+@app.route('/apply', methods=["POST"])
 def send_mail():
     try:
         fn = request.form['fn']
@@ -50,14 +47,13 @@ def send_mail():
                   "We greet you at {2} faculty and wish productive studying and unforgettable experience. \n" \
                   "See you on 1st September\n" \
                   "Your faithful, Arman".format(fn, sn, fac)
-        msg = Message("Welcome", sender='armankingofkings@gmail.com',recipients = [email])
+        msg = Message("Welcome", sender='armankingofkings@gmail.com', recipients=[email])
         msg.body = content
         mail.send(msg)
-        return app.send_static_file('application-form.html')
+        return app.send_static_file('application-form-access.html')
     except SMTPRecipientsRefused:
         flash("Incorrect email", "error")
         return app.send_static_file('application-form.html')
-
 
 
 @app.route('/<path:path>')

@@ -42,14 +42,47 @@ def send_mail():
         sn = request.form['sn']
         fac = request.form['fac']
         email = request.form['email']
-        content = "Hello, {0} {1}. \n" \
-                  "We are happy to meet you at our Fictum University of Saint Arman. \n" \
-                  "We greet you at {2} faculty and wish productive studying and unforgettable experience. \n" \
-                  "See you on 1st September\n" \
-                  "Your faithful, Arman".format(fn, sn, fac)
-        msg = Message("Welcome", sender='armankingofkings@gmail.com', recipients=[email])
-        msg.body = content
-        mail.send(msg)
+        address = request.form['adr']
+        phone = request.form['cp']
+        phone2 = request.form['ap']
+        gender = request.form['gender']
+        par = request.form['parents_name']
+        par_cont = request.form['parents_contacts']
+        marks = request.form['marks']
+        gy = request.form['grad_year']
+        ai = request.form['ai']
+
+        content1 = "Dear {0} {1}. \n" \
+                   "We are happy to meet you at our Fictum University of Saint Arman. \n" \
+                   "We greet you at {2} faculty and wish productive studying and unforgettable experience. \n" \
+                   "See you on 1st September\n" \
+                   "Your faithful, Arman\n" \
+                   "P.S. we'll send you an information\n" \
+                   "P.S.S wait for one more letter to check up correctness " \
+                   "of information you've entered".format(fn, sn, fac)
+        msg1 = Message("Greetings", sender='armankingofkings@gmail.com', recipients=[email])
+        msg1.body = content1
+        mail.send(msg1)
+
+        content2 = "Dear {0} {1}.\n" \
+                   "Please, check up correctness of the information below\n\n" \
+                   "Name: {0} {1}\n" \
+                   "Gender: {6}" \
+                   "Faculty: {2}\n" \
+                   "Address: {3}\n" \
+                   "Phone: {4}\n" \
+                   "Additional phone: {5}\n" \
+                   "Parents name: {7}\n" \
+                   "Parents contacts: {8}\n" \
+                   "School marks: {9}\n" \
+                   "Graduation year: {10}\n" \
+                   "Additional information: \n{11}\n" \
+                   "Your faithful, Arman".format(fn, sn, fac, address, phone, phone2,
+                                                 gender, par, par_cont, marks, gy, ai)
+        msg2 = Message("Welcome", sender='armankingofkings@gmail.com', recipients=[email])
+        msg2.body = content2
+        mail.send(msg2)
+
         return app.send_static_file('application-form-access.html')
     except SMTPRecipientsRefused:
         flash("Incorrect email", "error")

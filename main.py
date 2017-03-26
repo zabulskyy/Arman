@@ -65,7 +65,7 @@ def send_mail():
         mail.send(msg1)
 
         content2 = "Dear {0} {1}.\n\n" \
-                   "Please, check up correctness of the information below\n\n" \
+                   "Here is the data you entered into our application form:\n\n" \
                    "Name: {0} {1}\n" \
                    "Gender: {6}" \
                    "Faculty: {2}\n" \

@@ -8,8 +8,8 @@ app.secret_key = 'some_secret'
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'armankingofkings@gmail.com'
-app.config['MAIL_PASSWORD'] = 'armantheking'
+app.config['MAIL_USERNAME'] = 'saint.arman.university@gmail.com'
+app.config['MAIL_PASSWORD'] = 'armanthebest123'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -64,7 +64,7 @@ def send_mail():
         msg1.body = content1
         mail.send(msg1)
 
-        content2 = "Dear {0} {1}.\n" \
+        content2 = "Dear {0} {1}.\n\n" \
                    "Please, check up correctness of the information below\n\n" \
                    "Name: {0} {1}\n" \
                    "Gender: {6}" \

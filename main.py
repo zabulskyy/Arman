@@ -67,7 +67,7 @@ def send_mail():
         content2 = "Dear {0} {1}.\n\n" \
                    "Here is the data you entered into our application form:\n\n" \
                    "Name: {0} {1}\n" \
-                   "Gender: {6}" \
+                   "Gender: {6}\n" \
                    "Faculty: {2}\n" \
                    "Address: {3}\n" \
                    "Phone: {4}\n" \
